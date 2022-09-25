@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
     })
     .then(function (response) {
       callback(
-        `It is ${response.data.current.temperature} degrees out, it feels like ${response.data.current.feelslike} degrees out`
+        `It is ${response.data.current.temperature} degrees out, it feels like ${response.data.current.feelslike} degrees out, the wind speed is ${response.data.current.wind_speed}${response.data.current.wind_dir}`
       );
     })
     .catch(function (error) {
